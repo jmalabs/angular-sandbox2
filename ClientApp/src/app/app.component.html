@@ -1,2 +1,30 @@
-<h1 appBasicDirective>Test Basic Directive</h1>
-<h6 appRedenderDirective>Test Renderer Directive</h6>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onlyCountries =!onlyCountries">
+        Only Show Countries
+      </button>
+      <hr>
+      <div *ngIf="onlyCountries">
+        <div class="list-group-item" *ngFor="let country of countries">{{country}}</div>
+
+      </div>
+      <div *appUnless="onlyCountries">
+        <div appRedenderDirective class="list-group-item" *ngFor="let city of stateOrCities">{{city}}</div>
+      </div>
+      <h1 appBasicDirective>Test Basic Directive</h1>
+      <h6 appRedenderDirective>Test Renderer Directive</h6>
+      <p>this is a test</p>
+
+      <input type="text" class="form-control" [(ngModel)]="value">
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="20"> Value is {{value}}</p>
+        <p *ngSwitchCase="10"> Value is {{value}}</p>
+        <p *ngSwitchCase="5"> Value is {{value}}</p>
+        <!-- <p *ngSwitchDefault> Value is {{value}}</p>     -->
+
+
+      </div>
+    </div>
+  </div>
+</div>

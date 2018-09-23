@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  onlyCountries = false;
+  countries = ['PH', 'TH', 'SG', 'US']
+  stateOrCities = ['MNL', 'WI', 'FL', 'CA']
+  value:number = 20;
 }
