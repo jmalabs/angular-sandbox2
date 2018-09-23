@@ -12,6 +12,8 @@ namespace directive
 {
     public class Program 
     {
+
+        // this is the main method.
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
