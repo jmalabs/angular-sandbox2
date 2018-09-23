@@ -1,3 +1,4 @@
+import {RendererDirective } from './directives/renderer.directive';
 import { BasicDirective } from './basic.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BasicDirective
+    BasicDirective,
+    RendererDirective
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
